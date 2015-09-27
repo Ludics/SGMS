@@ -21,10 +21,10 @@ int main()
 	base *ptrBase[] = { &myCourse, &myStu };
 	cout << "\t<按任意键进入>\n\t";  
 	cin.get();  
-	system( "cls" );    //清屏
+	//	system( "cls" );    //清屏
 	while ( !quit )
 	{
-		system( "cls" );  
+	  //	system( "cls" );  
 		Dis_Menu();
 		cin >> order;
 		switch ( order )
@@ -32,7 +32,7 @@ int main()
 		case 0: quit = true; break;
 		case 1: 
 			{
-				system( "cls" );  
+			  //	system( "cls" );  
 				Dis_StuInfoMng(); 
 				cin >> order;
 				switch ( order )
@@ -46,7 +46,7 @@ int main()
 			}break;
 		case 2:			
 			{
-				system( "cls" );  
+			  //	system( "cls" );  
 				Dis_StuInfoHandle(); 
 				cin >> order;
 				switch ( order )
@@ -55,7 +55,7 @@ int main()
 				case 1: myStu.seekStu(); break;
 				case 2: myStu.sortList(); break;
 				case 3: {
-					system( "cls");
+				  //		system( "cls");
 					ptrBase[1]->Display();
 					}break;
 				case 4: myStu.Unpass(); break;
@@ -64,7 +64,7 @@ int main()
 			}break;
 		case 3: 			
 			{
-				system( "cls" );  
+			  //	system( "cls" );  
 				Dis_CourseInfoMng(); 
 				cin >> order;
 				switch ( order )
@@ -77,6 +77,7 @@ int main()
 		default: continue;
 		}
 	}
+	return 0;
 }
 
 void Dis_Index()
